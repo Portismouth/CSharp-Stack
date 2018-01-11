@@ -1,0 +1,20 @@
+<head>
+    <title>Time Display</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Current time and date</h1>
+        </div>
+        <div class="border">
+            @{
+                DateTime Current = DateTime.Now;
+                <p>@Current</p>
+            }
+        </div>
+
+
+    </div>
+
+</body>

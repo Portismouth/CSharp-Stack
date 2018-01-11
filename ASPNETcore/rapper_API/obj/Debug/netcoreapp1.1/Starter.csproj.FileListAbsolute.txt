@@ -1,0 +1,8 @@
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\bin\Debug\netcoreapp1.1\Starter.deps.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\bin\Debug\netcoreapp1.1\Starter.runtimeconfig.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\bin\Debug\netcoreapp1.1\Starter.runtimeconfig.dev.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\bin\Debug\netcoreapp1.1\Starter.dll
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\bin\Debug\netcoreapp1.1\Starter.pdb
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\obj\Debug\netcoreapp1.1\Starter.AssemblyInfo.cs
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\obj\Debug\netcoreapp1.1\Starter.dll
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\rapper_API\obj\Debug\netcoreapp1.1\Starter.pdb

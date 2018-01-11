@@ -1,0 +1,16 @@
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.deps.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.runtimeconfig.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.runtimeconfig.dev.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.dll
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.pdb
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\obj\Debug\netcoreapp1.1\basic_CRUD.AssemblyInfo.cs
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\obj\Debug\netcoreapp1.1\basic_CRUD.dll
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\basic_CRUD\obj\Debug\netcoreapp1.1\basic_CRUD.pdb
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.deps.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.runtimeconfig.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.runtimeconfig.dev.json
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.dll
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\bin\Debug\netcoreapp1.1\basic_CRUD.pdb
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\obj\Debug\netcoreapp1.1\basic_CRUD.AssemblyInfo.cs
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\obj\Debug\netcoreapp1.1\basic_CRUD.dll
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\languageEssentials\basic_CRUD\obj\Debug\netcoreapp1.1\basic_CRUD.pdb

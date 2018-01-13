@@ -7042,16 +7042,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\human\\human.csproj",
+      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\wizard\\human.csproj",
       "projectName": "human",
-      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\human\\human.csproj",
-      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\human\\obj\\",
+      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\wizard\\human.csproj",
+      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\wizard\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/human.dll": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\human\\bin\\placeholder\\netcoreapp1.1\\human.dll"
+        "lib/netcoreapp1.1/human.dll": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\wizard\\bin\\placeholder\\netcoreapp1.1\\human.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

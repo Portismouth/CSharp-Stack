@@ -1,0 +1,11 @@
+img {
+    border: solid black 3px;
+}
+.nav div {
+    padding: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+.nav {
+    background-color: burlywood 
+}

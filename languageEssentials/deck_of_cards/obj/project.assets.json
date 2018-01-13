@@ -7042,16 +7042,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\deck_of_cards\\deck_of_cards.csproj",
+      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\deck_of_cards\\deck_of_cards.csproj",
       "projectName": "deck_of_cards",
-      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\deck_of_cards\\deck_of_cards.csproj",
-      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\deck_of_cards\\obj\\",
+      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\deck_of_cards\\deck_of_cards.csproj",
+      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\deck_of_cards\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/deck_of_cards.dll": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\deck_of_cards\\bin\\placeholder\\netcoreapp1.1\\deck_of_cards.dll"
+        "lib/netcoreapp1.1/deck_of_cards.dll": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\deck_of_cards\\bin\\placeholder\\netcoreapp1.1\\deck_of_cards.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

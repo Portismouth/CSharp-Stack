@@ -689,6 +689,23 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.Kestrel.dll": {}
         }
       },
+      "Microsoft.AspNetCore.StaticFiles/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.2",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
+          "Microsoft.Extensions.FileProviders.Abstractions": "1.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "Microsoft.Extensions.WebEncoders": "1.1.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.WebUtilities/1.1.2": {
         "type": "package",
         "dependencies": {
@@ -1219,13 +1236,13 @@
           "lib/netstandard1.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "Microsoft.Extensions.WebEncoders/1.1.1": {
+      "Microsoft.Extensions.WebEncoders/1.1.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
-          "Microsoft.Extensions.Options": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
+          "Microsoft.Extensions.Options": "1.1.2",
           "NETStandard.Library": "1.6.1",
-          "System.Text.Encodings.Web": "4.3.0"
+          "System.Text.Encodings.Web": "4.3.1"
         },
         "compile": {
           "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll": {}
@@ -4036,6 +4053,19 @@
         "microsoft.aspnetcore.server.kestrel.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.StaticFiles/1.1.2": {
+      "sha512": "5eGmb9XGYvX+L6Vm2UU36pyXP6CMVYZgkIy7ERWG//GGrC+QJJFQtQ5h2iLYZaKpRkLRdFlhWns2yUoaQQdA/Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.staticfiles/1.1.2",
+      "files": [
+        "lib/net451/Microsoft.AspNetCore.StaticFiles.dll",
+        "lib/net451/Microsoft.AspNetCore.StaticFiles.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.xml",
+        "microsoft.aspnetcore.staticfiles.1.1.2.nupkg.sha512",
+        "microsoft.aspnetcore.staticfiles.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.WebUtilities/1.1.2": {
       "sha512": "xRAkQMf1Ybp2rqstWtPjOvByPbiuvj81xkjSZ8+ekU3rDMIbN70dHN0QZHUO737GjayvPzoBz3oReGa4m6vgcA==",
       "type": "package",
@@ -4504,14 +4534,14 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
-    "Microsoft.Extensions.WebEncoders/1.1.1": {
-      "sha512": "orwMgiF/lf/Uwt1CGV3o8OnycVLXg7rCk+y1BlNgDARtoBnC5VE4xoRfh0WkX+QktGSigt3dEPAuDANfWtqlCg==",
+    "Microsoft.Extensions.WebEncoders/1.1.2": {
+      "sha512": "a6xfFS4H7T+4L1xFhfhIBH0HPzEHjEMCvCpLHmI+kFg6wVNRmy216CVnQodliadAK39uqGtIp3eq3qXoVIzsZw==",
       "type": "package",
-      "path": "microsoft.extensions.webencoders/1.1.1",
+      "path": "microsoft.extensions.webencoders/1.1.2",
       "files": [
         "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll",
         "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.xml",
-        "microsoft.extensions.webencoders.1.1.1.nupkg.sha512",
+        "microsoft.extensions.webencoders.1.1.2.nupkg.sha512",
         "microsoft.extensions.webencoders.nuspec"
       ]
     },
@@ -9514,6 +9544,7 @@
     ".NETCoreApp,Version=v1.1": [
       "Microsoft.AspNetCore >= 1.1.2",
       "Microsoft.AspNetCore.Mvc >= 1.1.2",
+      "Microsoft.AspNetCore.StaticFiles >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.2"
     ]
   },
@@ -9552,6 +9583,10 @@
             "version": "1.1.2"
           },
           "Microsoft.AspNetCore.Mvc": {
+            "target": "Package",
+            "version": "1.1.2"
+          },
+          "Microsoft.AspNetCore.StaticFiles": {
             "target": "Package",
             "version": "1.1.2"
           }

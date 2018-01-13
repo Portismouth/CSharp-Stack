@@ -1,0 +1,8 @@
+.console {
+    display: block; 
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: auto;
+    text-align: center;
+    border: solid black 3px;
+}

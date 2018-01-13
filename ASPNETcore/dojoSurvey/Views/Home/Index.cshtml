@@ -1,0 +1,30 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <h1>Hello</h1>
+    <form action="results" method="post">   
+        <label for="name">Your Name</label>
+        <input type="text" name="name"><br>
+        <label for="location">Dojo Location</label>
+        <select name="location">
+            <option value="chicago">Chicago</option>
+            <option value="new york">New York</option>
+            <option value="san francisco">San Francisco</option>
+        </select><br>
+        <label for="language">Favorite Language</label>
+        <select name="language">
+            <option value="Python">Python<option>
+            <option value="C#">C#</option>
+            <option value="MEAN">MEAN</option>
+        </select><br>
+        <label for="comment">Comment</label>
+        <textarea name="comment" id="" cols="30" rows="3"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>

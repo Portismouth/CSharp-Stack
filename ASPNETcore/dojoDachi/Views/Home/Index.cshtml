@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dojodachi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-sm-auto"><h3 class="fulldiv">Fullness: <span class="fullnessCount">@TempData["fullness"]</span></h3></div>
+            <div class="col-sm-auto"><h3>Happiness: @TempData["happiness"]</h3></div>
+            <div class="col-sm-auto"><h3>Meals: @TempData["meals"]</h3></div>
+            <div class="col-sm-auto"><h3>Energy: @TempData["energy"]</h3></div>
+        </div>
+        <div class="console">
+            <img src="@TempData["image"]"><br>
+            <p>@TempData["message"]</p>
+        </div>
+        @{
+            if(TempData["gameStatus"] == "playing")
+            {
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-auto">
+                        <a class="btn btn-primary btn-lg" href="feed" role="button">Feed</a>
+                        <button class="btn btn-primary btn-lg" onclick="feed()">Feed</button>
+                    </div>
+                    <div class="col-sm-auto">
+                        <a class="btn btn-primary btn-lg" href="play" role="button">Play</a>
+                    </div>
+                    <div class="col-sm-auto">
+                        <a class="btn btn-primary btn-lg" href="work" role="button">Work</a>
+                    </div>
+                    <div class="col-sm-auto">
+                        <a class="btn btn-primary btn-lg" href="sleep" role="button">Sleep</a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-auto">
+                        <a class="btn btn-primary btn-lg" href="reset" role="button">Restart</a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="~/scripts/scripts.js"></script>
+</body>

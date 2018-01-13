@@ -7,11 +7,14 @@
         <div class="row">
             <h1>Current time and date</h1>
         </div>
-        <div class="border">
+        <div class="border column 2">
             @{
-                DateTime Current = DateTime.Now;
-                <p>@Current</p>
+                DateTime CurrentTime = DateTime.Now;
+                string date = CurrentTime.ToString("MMMM dd, yyyy");
+                string time = CurrentTime.ToString("h:mm tt");
             }
+            <h2>@date</h2>
+            <h2>@time</h2>
         </div>
 
 

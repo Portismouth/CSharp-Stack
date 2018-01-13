@@ -15,7 +15,7 @@ namespace MusicApi.Controllers {
         }
         [Route("groups")]
         [HttpGet]
-        public JsonResult Groups()
+        public JsonResult Groups(bool listArtists = false)
         {
             return Json(allGroups);
         }
@@ -37,7 +37,7 @@ namespace MusicApi.Controllers {
                                 select new
                                 {
                                     Group = Group.GroupName,
-                                    Members
+                                    Members = Members.Select(e => e.ArtistName)
                                 };
                 return Json(groupName);
             }
@@ -47,22 +47,23 @@ namespace MusicApi.Controllers {
                 return Json(groupName);
             }
         }
-        [Route("groups/id/{id}/{display}")]
+        [Route("groups/id/{id}")]
         [HttpGet]
         public JsonResult groupID(int id, bool display = false)
         {
             if (display == true)
             {
-                var groupID = from Group in allGroups
-                                join Artist in allArtists
-                                on Group.Id equals Artist.GroupId
-                                into Members
-                                where Group.Id == id
-                                select new
-                                {
-                                    Group = Group.GroupName,
-                                    Members = Members.Select(e => e.ArtistName)
-                                };
+                var groupID = 
+                    from Group in allGroups
+                    join Artist in allArtists
+                    on Group.Id equals Artist.GroupId
+                    into Members
+                    where Group.Id == id
+                    select new
+                    {
+                        Group = Group.GroupName,
+                        Members = Members.Select(e => e.ArtistName)
+                    };
                 return Json(groupID);
             }
             else

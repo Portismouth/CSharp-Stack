@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,12 +8,16 @@ namespace dojoDachi.Controllers
     
     public class HomeController : Controller
     {
+        Dictionary<string, string> feedMe = new Dictionary<string, string>();
+        Random rand = new Random();
+
         [Route("")]
         [HttpGet]
         public IActionResult Index()
         {
             TempData["gameStatus"] = "playing";
             TempData["image"] = "/images/1f642.png";
+            // TempData["fullness"] = FeedJS();
             int? fullness = HttpContext.Session.GetInt32("fullness");
             if(fullness == null)
             {
@@ -22,10 +27,21 @@ namespace dojoDachi.Controllers
             }
             else
             {
-                // TempData["fullness"] = FeedJS();
-                TempData["fullness"] = fullness;
-                TempData["image"] = "/images/1f917.png";
+                TempData["fullness"] = FeedJS();
             }
+            // int? fullness = HttpContext.Session.GetInt32("fullness");
+            // if(fullness == null)
+            // {
+            //     HttpContext.Session.SetInt32("fullness", 20);
+            //     TempData["fullness"] = 20;
+            //     TempData["message"] = "Hi! Meet your Dojodachi!";
+            // }
+            // else
+            // {
+            //     // TempData["fullness"] = FeedJS();
+            //     TempData["fullness"] = fullness;
+            //     // TempData["image"] = "/images/1f917.png";
+            // }
             int? happiness = HttpContext.Session.GetInt32("happiness");
             if(happiness == null)
             {
@@ -44,7 +60,8 @@ namespace dojoDachi.Controllers
             }
             else
             {
-                TempData["meals"] = meals;
+                int? meal = HttpContext.Session.GetInt32("meals") - 1;
+                TempData["meals"] = meal;
             }
             int? energy = HttpContext.Session.GetInt32("energy");
             if (energy == null)
@@ -56,43 +73,104 @@ namespace dojoDachi.Controllers
             {
                 TempData["energy"] = energy;
             }
-            if(energy > 100 && fullness > 100 && happiness > 100)
-            {
-                TempData["message"] = "You win!!!";
-                TempData["image"] = "/images/1f60d.png";
-                TempData["gameStatus"] = "over";
-            }
-            if(fullness == 0 || happiness == 0)
-            {
-                TempData["message"] = "Your Dojodachi has passed away... :(";
-                TempData["image"] = "/images/1f635.png";
-                TempData["gameStatus"] = "over";
-            }
+            // if(energy > 100 && fullness > 100 && happiness > 100)
+            // {
+            //     TempData["message"] = "You win!!!";
+            //     TempData["image"] = "/images/1f60d.png";
+            //     TempData["gameStatus"] = "over";
+            // }
+            // if(fullness <= 0 || happiness <= 0)
+            // {
+            //     TempData["message"] = "Your Dojodachi has passed away... :(";
+            //     TempData["image"] = "/images/1f635.png";
+            //     TempData["gameStatus"] = "over";
+            // }
             return View();
         }
+        
         [Route("feedjs")]
         [HttpGet]
-        public int? FeedJS()
+        public object FeedJS()
         {
-            Random rand = new Random();
+            // if (fullness == null)
+            // {
+            //     HttpContext.Session.SetInt32("fullness", 20);
+            //     TempData["fullness"] = 20;
+            //     TempData["message"] = "Hi! Meet your Dojodachi!";
+                
+            //     //add attributes to dict feedMe for AJAX
+            //     feedMe.Add("fullness", Convert.ToString(TempData["fullness"]));
+            //     feedMe.Add("message", (string)TempData["message"]);
+            //     feedMe.Add("img", (string)TempData["image"]);
+            //     return feedMe;
+            // }
+
             int? fullness = HttpContext.Session.GetInt32("fullness");
             int fill = rand.Next(5, 11);
-            if (fullness == null)
+            int chance = rand.Next(1, 5);
+            HttpContext.Session.SetInt32("meals", 3);
+            int? meals = HttpContext.Session.GetInt32("meals");
+            TempData["meals"] = meals;
+
+            if(meals > 0)
             {
-                HttpContext.Session.SetInt32("fullness", 20);
-                TempData["fullness"] = 20;
-                TempData["message"] = "Hi! Meet your Dojodachi!";
+                if(chance == 1)
+                {
+                    int? meal = HttpContext.Session.GetInt32("meals") - 1;
+                    HttpContext.Session.SetInt32("meals", (int)meal);
+                    int? mealCount = HttpContext.Session.GetInt32("meals");
+                    TempData["meals"] = mealCount;
+                    TempData["message"] = $"BOOO! Your Dojodachi didn't like it's meal.";
+                    TempData["image"] = "/images/1f922.png";
+
+                    //add attributes to dict feedMe for AJAX
+                    feedMe.Add("message", (string)TempData["message"]);
+                    feedMe.Add("img", (string)TempData["image"]);
+                    feedMe.Add("meals", Convert.ToString(TempData["meals"]));
+                    
+                    //returns Dictionary
+                    return feedMe;
+                }
+                else
+                {
+                    int? meal = HttpContext.Session.GetInt32("meals") - 1;
+                    HttpContext.Session.SetInt32("meals", (int)meal);
+                    int? _fullness = HttpContext.Session.GetInt32("fullness") + fill;
+                    HttpContext.Session.SetInt32("fullness", (int)_fullness);
+                    int? mealCount = HttpContext.Session.GetInt32("meals");
+                    TempData["meals"] = mealCount;
+                    TempData["fullness"] = fullness;
+                    TempData["image"] = "/images/1f917.png";
+                    TempData["message"] = $"NOM NOM! You just fed your Dojodachi. Fullness +{fill}";
+                    
+                    //add attributes to dict feedMe for AJAX
+                    feedMe.Add("fullness", Convert.ToString(TempData["fullness"]));
+                    feedMe.Add("message", (string)TempData["message"]);
+                    feedMe.Add("img", (string)TempData["image"]);
+                    feedMe.Add("meals", Convert.ToString(TempData["meals"]));
+                    
+                    //returns Dictionary
+                    return feedMe;
+                }
             }
             else
             {
-                int? _fullness = HttpContext.Session.GetInt32("fullness") + fill;
-                HttpContext.Session.SetInt32("fullness", (int)_fullness);
-                TempData["fullness"] = fullness;
-                TempData["image"] = "/images/1f917.png";
-                TempData["message"] = $"NOM NOM! You just fed your Dojodachi. Fullness +{fill}";
+                TempData["message"] = "You have no more meals to feed your Dojodachi!";
+                TempData["image"] = "/images/1f615.png";
+                int? mealCount = HttpContext.Session.GetInt32("meals");
+                TempData["meals"] = mealCount;
+
+                //add attributes to dict feedMe for AJAX
+                feedMe.Add("fullness", Convert.ToString(TempData["fullness"]));
+                feedMe.Add("message", (string)TempData["message"]);
+                feedMe.Add("img", (string)TempData["image"]);
+                feedMe.Add("meals", Convert.ToString(TempData["meals"]));
+                
+                //returns Dictionary
+                return feedMe;
             }
-            return fullness;
         }
+
         [Route("feed")]
         [HttpGet]
         public IActionResult Feed()
@@ -126,6 +204,39 @@ namespace dojoDachi.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [Route("playjs")]
+        [HttpGet]
+        public int? PlayJS()
+        {
+            Random rand = new Random();
+            int chance = rand.Next(1, 5);
+            int? energy = HttpContext.Session.GetInt32("energy");
+            int affect = rand.Next(5, 11);
+            if (energy > 0)
+            {
+                if (chance == 1)
+                {
+                    int? _energy = HttpContext.Session.GetInt32("energy") - 5;
+                    HttpContext.Session.SetInt32("energy", (int)_energy);
+                    TempData["message"] = $"BOOO! Your Dojodachi didn't feel like playing.";
+                }
+                else
+                {
+                    int? _energy = HttpContext.Session.GetInt32("energy") - 5;
+                    HttpContext.Session.SetInt32("energy", (int)_energy);
+                    int? happiness = HttpContext.Session.GetInt32("happiness") + affect;
+                    HttpContext.Session.SetInt32("happiness", (int)happiness);
+                    TempData["message"] = $"YIPEE! You just played with your Dojodachi. Happiness +{affect}";
+                }
+            }
+            else
+            {
+                TempData["message"] = "You're Dojodachi is too tired to play... Try sleeping";
+            }
+            return energy;
+        }
+
         [Route("play")]
         [HttpGet]
         public IActionResult Play()

@@ -16,6 +16,7 @@ namespace dojoSurvey.Controllers
             TempData["Passcode"] = Generate();
             return View();
         }
+        
         [Route("generate")]
         [HttpGet]
         public string Generate()

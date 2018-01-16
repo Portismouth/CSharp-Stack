@@ -10,9 +10,9 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-sm-auto"><h3 class="fulldiv">Fullness: <span class="fullnessCount">@TempData["fullness"]</span></h3></div>
-            <div class="col-sm-auto"><h3>Happiness: @TempData["happiness"]</h3></div>
+            <div class="col-sm-auto"><h3>Happiness: <span class="happinessCount">@TempData["happiness"]</span></h3></div>
             <div class="col-sm-auto"><h3>Meals: <span class="mealCount">@TempData["meals"]</span></h3></div>
-            <div class="col-sm-auto"><h3>Energy: @TempData["energy"]</h3></div>
+            <div class="col-sm-auto"><h3>Energy: <span class="energyCount">@TempData["energy"]</span></h3></div>
         </div>
         <div class="console">
             <img src="@TempData["image"]"><br>
@@ -23,18 +23,20 @@
             {
                 <div class="row justify-content-md-center">
                     <div class="col-sm-auto">
-                        <a class="btn btn-primary btn-lg" href="feed" role="button">Feed</a>
-                        <button class="btn btn-primary btn-lg" onclick="feedtest()">Feed</button>
+                        <!-- <a class="btn btn-primary btn-lg" href="feed" role="button">Feed</a> -->
+                        <button class="feed btn btn-primary btn-lg" onclick="feed()">Feed</button>
                     </div>
                     <div class="col-sm-auto">
-                        <a class="btn btn-primary btn-lg" href="play" role="button">Play</a>
+                        <!-- <a class="btn btn-primary btn-lg" href="play" role="button">Play</a> -->
                         <button class="btn btn-primary btn-lg" onclick="play()">Play</button>
                     </div>
                     <div class="col-sm-auto">
-                        <a class="btn btn-primary btn-lg" href="work" role="button">Work</a>
+                        <!-- <a class="btn btn-primary btn-lg" href="work" role="button">Work</a> -->
+                        <button class="btn btn-primary btn-lg" onclick="work()">Work</button>
                     </div>
                     <div class="col-sm-auto">
-                        <a class="btn btn-primary btn-lg" href="sleep" role="button">Sleep</a>
+                        <!-- <a class="btn btn-primary btn-lg" href="sleep" role="button">Sleep</a> -->
+                        <button class="btn btn-primary btn-lg" onclick="sleep()">Sleep</button>
                     </div>
                 </div>
             }

@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <div class="notes">
+        <h4>Notes</h4>
+        @{
+            foreach (var note in @ViewBag.Notes)
+            {
+                <div class="indy-note" action="update" method="post">
+                    <h3>@note["note"]</h3>
+                    <a href="delete/@note["id"]">Delete</a>
+                    <br>
+                    <input type="hidden" value="@note["id"]" name="id">
+                    <p class="description">@note["description"]</p>
+                    <textarea class="updateDesc" rows="5" cols="15" name="desc" placeholder="@note["description"]"></textarea>
+                    <br>
+                    <input type="submit" class="btn btn-primary" value="Update">
+                </div>
+            }
+        }
+    </div>
+    <br>
+    <hr>
+    <h5 class="error"></h5>
+    <input id="noteName" type="text" placeholder="Insert note title here..." name="name">
+    <br><br>
+    <textarea id="noteDesc" rows="5" cols="15" name="desc"></textarea>
+    <br>
+    <!-- <input type="submit" class="btn btn-primary create" value="Add Note"> -->
+    <br>
+    <button class="btn btn-primary create">Add Note</button>
+</div>

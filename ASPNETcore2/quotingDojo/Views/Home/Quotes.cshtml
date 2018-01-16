@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Some Stuff</h1>
+@{
+    var quotes = @ViewBag.Quotes;
+    foreach (var quote in quotes)
+    {
+        <h3>@quote["quote"]</h3>
+        <h5>- @quote["name"]</h5>
+        <p>@quote["created_at"]</p>
+    }
+}
+<a href="/">Go Back</a>

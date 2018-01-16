@@ -1,0 +1,10 @@
+/*Write all of your CSS here*/
+.notes h3 {
+    display: inline-block;
+}
+.notes label {
+    vertical-align: top;
+}
+.error {
+    color: red;
+}

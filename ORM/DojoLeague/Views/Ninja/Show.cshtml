@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <a href="/dojos">See All Dojos</a>
+    <h2>@ViewBag.Name</h2>
+    <h3>Ninja Level - @ViewBag.Level</h3>
+    <h4>Current Dojo: <a href="/dojo/@ViewBag.DojoId">@ViewBag.Dojo</a></h4>
+</div>

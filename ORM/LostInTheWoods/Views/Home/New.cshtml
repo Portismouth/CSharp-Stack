@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model LostInTheWoods.Models.Trail
+
+<h2><u>Add a New Trail</u></h2>
+<a href="/">Go Home</a>
+<form asp-controller="Home" asp-action="Add" method="post">
+    <label>Trail Name:</label>
+    <input class="form-control" asp-for="Name">
+    <span asp-validation-for="Name"></span>
+    <label>Description:</label>
+    <textarea class="form-control" asp-for="Description"></textarea>
+    <span asp-validation-for="Description"></span>
+    <label>Trail Length:</label>
+    <input class="form-control" asp-for="Length">
+    <span asp-validation-for="Length"></span>
+    <label>Elevation Change:</label>
+    <input class="form-control" asp-for="ElevationChange">
+    <span asp-validation-for="ElevationChange"></span>
+    <label>Latitude:</label>
+    <input class="form-control" asp-for="Latitude">
+    <span asp-validation-for="Latitude"></span>
+    <label>Longitude:</label>
+    <input class="form-control" asp-for="Longitude">
+    <span asp-validation-for="Longitude"></span>
+    <br>
+    <input type="submit" class="btn btn-primary" value="Add Trail!">
+</form>

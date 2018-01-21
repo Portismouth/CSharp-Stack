@@ -1,0 +1,92 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model DojoLeague.Models.Ninja
+<div class="col-md-4">
+    <h1>Registered Ninjas</h1>
+    <hr>
+    <table class="table">
+        <thead class="thead-default">
+            <tr>
+                <th>Ninja Name</th>
+                <th>Home Dojo</th>
+            </tr>
+        </thead>
+    @{
+        foreach (var ninja in @ViewBag.Ninjas)
+        {
+            <tbody>
+                <tr>
+                    <td><a href="ninja/@ninja.Id">@ninja.Name</a></td>
+                    @{
+                        if(@ninja.DojoId == 0)
+                        {
+                            <td>Rogue</td>
+                        }
+                        else
+                        {
+                            <td><a href="/dojo/@ninja.DojoId">@ninja.DojoName</a></td>
+                        }
+                    }     
+                </tr>
+ 
+            </tbody>
+        }
+    }
+    </table>
+</div>
+<div class="col-md-8">
+    <h1>Register A Ninja</h1>
+    <hr>
+    <form asp-controller="Ninja" asp-action="AddNinja" method="POST">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Dojo Name</label>
+                <input class="form-control" asp-for="Name">
+                <span asp-validation-for="Name"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Ninja Level (1-10)</label>
+                <select class="form-control" asp-for="Level">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span asp-validation-for="Level"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Assigned Dojo</label>
+                <select class="form-control" name="dojo">
+                    <option value="0">Rogue</option>
+                    @{
+                        foreach(var dojo in @ViewBag.Dojos)
+                        {
+                            <option value="@dojo.Id">@dojo.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <label>Description (Optional)</label>
+                <textarea class="form-control" asp-for="Description" rows="4"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success btn-lg">Add a Ninja</button>
+    </form>
+</div>

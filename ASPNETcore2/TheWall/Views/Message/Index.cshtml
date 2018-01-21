@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Your Wall";
+}
+<h1>Hello, @TempData["FirstName"]!</h1>
+<hr>
+@model TheWall.Models.MessagingViewModel
+<h3>Post a message</h3>
+<form asp-controller="Message" asp-action="Message" method="post">
+    <label asp-for="UserMessage.Content"></label>
+    <textarea asp-for="UserMessage.Content"></textarea>
+    <span asp-validation-for="UserMessage.Content"></span>
+    <br>
+    <button type="submit">Add a message</button>
+</form>
+@{
+    foreach (var message in @ViewBag.Messages)
+    {
+        <hr>
+        <h3>@message["first_name"] @message["last_name"] - @message["created_at"].ToString("MM/dd/yyyy")</h3>
+        <p>@message["message"]</p>
+        if(@ViewBag.Comments.Count > 0)
+        {
+            foreach (var comment in @ViewBag.Comments)
+            {
+                if(@comment["message_id"] == @message["id"])
+                {
+                    <hr>
+                    <h4>@comment["first_name"] @comment["last_name"] - @comment["created_at"].ToString("MM/dd/yyyy")</h4>
+                    <p>@comment["comment"]</p>
+                }
+            }
+        }
+
+        <form asp-controller="Message" asp-action="Comment" method="post">
+            <input type="hidden" asp-for="UserComment.MessageId" value="@message["id"]">
+            <label asp-for="UserComment.Content"></label>
+            <input asp-for="UserComment.Content">
+            <span asp-validation-for="UserComment.Content"></span>
+            <br>
+            <button type="submit">Add a comment</button>
+        </form>
+    }
+}

@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Reviews</h1>
+@{
+    foreach(var review in @ViewBag.Review)
+    {
+        <h2>Review for @review.RestName</h2>
+        <h3>Visited by @review.ReviewerName on @review.VisitDate.ToString("MMMM dd, yyyy")</h3>
+        <p>Rating: @for (int i = 1; i <= @review.Rating; i++)
+        {
+            <span class="glyphicon glyphicon-star"></span>
+        }
+        </p>
+        <p>@review.RestReview</p>
+        <form asp-controller="Home" asp-action="helpful">
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up" value="true"></span> Helpful
+            </button>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-down"></span> Not Helpful
+            </button>
+        </form>
+        <hr>
+    }
+}
+<a href="/">Go Write a Review!</a>

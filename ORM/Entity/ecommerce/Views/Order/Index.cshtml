@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using Microsoft.Extensions.Options
+@inject IOptions<StripeSettings> Stripe
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Flamaflon</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li class="active"><a href="/order">Order</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid" style="margin-top: 75px">
+  <form action="/Home/Charge" method="POST">
+    <article>
+      <label>Amount: $5.00</label>
+    </article>
+    <script src="//checkout.stripe.com/v2/checkout.js"
+            class="stripe-button"
+            data-key="@Stripe.Value.PublishableKey"
+            data-locale="auto"
+            data-description="Sample Charge"
+            data-amount="500">
+    </script>
+  </form>
+</div>

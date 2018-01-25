@@ -1,0 +1,8 @@
+/*Write all of your CSS here*/
+.box {
+    height: 125px;
+    width: 125px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 0 10px 10px 10px;
+}

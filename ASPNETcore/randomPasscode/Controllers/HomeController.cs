@@ -16,13 +16,13 @@ namespace dojoSurvey.Controllers
             TempData["Passcode"] = Generate();
             return View();
         }
-        
+
         [Route("generate")]
         [HttpGet]
         public string Generate()
         {
             TempData["SessionCount"] = count++;
-            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*abcdefghijklmnopqrstuvwxyz";
             string passcode = "";
             for (int idx = 0; idx < 15; idx++)
             {
@@ -31,6 +31,7 @@ namespace dojoSurvey.Controllers
             }
             return passcode;
         }
+
         [Route("reset")]
         [HttpGet]
         public IActionResult Reset()

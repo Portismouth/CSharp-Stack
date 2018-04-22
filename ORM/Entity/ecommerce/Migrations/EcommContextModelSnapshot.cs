@@ -16,6 +16,52 @@ namespace ecommerce.Migrations
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .HasAnnotation("ProductVersion", "1.1.5");
 
+            modelBuilder.Entity("ecommerce.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Created_At");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("Quantity");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.Product", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Created_At");
+
+                    b.Property<string>("ProductDescription");
+
+                    b.Property<string>("ProductImage");
+
+                    b.Property<int>("ProductInventory");
+
+                    b.Property<string>("ProductName");
+
+                    b.Property<float>("ProductPrice");
+
+                    b.Property<DateTime>("Updated_At");
+
+                    b.HasKey("ProductId");
+
+                    b.ToTable("Products");
+                });
+
             modelBuilder.Entity("ecommerce.Models.User", b =>
                 {
                     b.Property<int>("UserId")
@@ -36,6 +82,19 @@ namespace ecommerce.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.Order", b =>
+                {
+                    b.HasOne("ecommerce.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ecommerce.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
         }
     }

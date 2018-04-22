@@ -6,45 +6,40 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using Stripe;
 using ecommerce.Models;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace ecommerce.Controllers
 {
     public class HomeController : Controller
     {
+        EcommContext _context;
+        public HomeController(EcommContext context)
+        {
+            _context = context;
+        }
+
         // GET: /Home/
         [HttpGet]
         [Route("")]
         public IActionResult Index()
         {
+            List<Product> AllProducts = _context.Products.Take(5).ToList();
+            List<Order> RecentOrders = _context.Orders.Include(u => u.User).Include(p => p.Product).Take(5).ToList();
+            List<User> RecentUsers = _context.Users.OrderByDescending(u => u.Created_At).Take(3).ToList();
+            ViewBag.Customers = RecentUsers;
+            ViewBag.Products = AllProducts;
+            ViewBag.Orders = RecentOrders;
             return View();
         }
-
+        
         [HttpGet]
-        [Route("error")]
-        public IActionResult Error()
+        [Route("/search")]
+        public IActionResult Result(string query)
         {
-            return View();
-        }
+            List<Product> ReturnedProducts = _context.Products.Where(p => p.ProductName.ToLower().Contains(query)).ToList();
 
-        public IActionResult Charge(string stripeEmail, string stripeToken)
-        {
-            var customers = new StripeCustomerService();
-            var charges = new StripeChargeService();
-
-            var customer = customers.Create(new StripeCustomerCreateOptions
-            {
-                Email = stripeEmail,
-                SourceToken = stripeToken
-            });
-
-            var charge = charges.Create(new StripeChargeCreateOptions
-            {
-                Amount = 500,
-                Description = "Sample Charge",
-                Currency = "usd",
-                CustomerId = customer.Id
-            });
-
+            ViewBag.Products = ReturnedProducts;
             return View();
         }
     }

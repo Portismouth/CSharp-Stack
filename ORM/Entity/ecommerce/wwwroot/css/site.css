@@ -1,8 +1,31 @@
 /*Write all of your CSS here*/
-.box {
+img {
     height: 125px;
     width: 125px;
     border: 2px solid black;
+}
+
+.prod-display {
+    width: 125px;
+    height: auto;
+    text-align: center;
+    margin: 0 0 10px 10px;
     display: inline-block;
-    margin: 0 10px 10px 10px;
+}
+
+.main p {
+    text-align: center;
+}
+
+.prod-image {
+    height: 200px;
+    width: 250px;
+    border: 2px solid black;
+    display: inline-block;
+}
+.prod-attr {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: 0;
 }

@@ -11,6 +11,7 @@ namespace ecommerce.Models
         public string ProductDescription { get; set; }
         public string ProductImage { get; set; }
         public int ProductInventory { get; set; }
+        public float ProductPrice { get; set; }
         public DateTime Created_At { get; set; }
         public DateTime Updated_At { get; set; }
 

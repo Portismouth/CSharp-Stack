@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -9585,45 +9585,58 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\ASPNETcore\\randomPasscode\\randomPasscode.csproj",
+      "projectUniqueName": "C:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\ASPNETcore\\randomPasscode\\randomPasscode.csproj",
       "projectName": "randomPasscode",
-      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\ASPNETcore\\randomPasscode\\randomPasscode.csproj",
-      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\ASPNETcore\\randomPasscode\\obj\\",
+      "projectPath": "C:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\ASPNETcore\\randomPasscode\\randomPasscode.csproj",
+      "packagesPath": "C:\\Users\\Ozzy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\ASPNETcore\\randomPasscode\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Ozzy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
-      "files": {
-        "lib/netcoreapp1.1/randomPasscode.dll": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\ASPNETcore\\randomPasscode\\bin\\placeholder\\netcoreapp1.1\\randomPasscode.dll"
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
       "netcoreapp1.1": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "1.1.2"
-          },
           "Microsoft.AspNetCore": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "[1.1.2, )"
           },
           "Microsoft.AspNetCore.Mvc": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "[1.1.2, )"
           },
           "Microsoft.AspNetCore.Session": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "[1.1.2, )"
           },
           "Microsoft.AspNetCore.StaticFiles": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "[1.1.2, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[1.1.2, )",
+            "autoReferenced": true
           }
         }
       }

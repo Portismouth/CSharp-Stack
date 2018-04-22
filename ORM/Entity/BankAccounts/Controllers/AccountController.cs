@@ -68,7 +68,7 @@ namespace BankAccounts.Controllers
             ViewBag.AccountType = ShowAccount.AccountType;
             ViewBag.AccountBalance = ShowAccount.AccountBalance.ToString("C", nfi);
             ShowAccount.AccountBalance.ToString("C", CultureInfo.CurrentCulture);
-            List<Transaction> AllTransactions = _context.Transactions.Include(transaction => transaction.Account).ToList();
+            List<Transaction> AllTransactions = _context.Transactions.OrderByDescending(t => t.Date).Include(transaction => transaction.Account).ToList();
             ViewBag.Transactions = AllTransactions;
             return View();
         }

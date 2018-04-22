@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -7451,21 +7451,33 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\music-linq\\LinqSkeleton.csproj",
+      "projectUniqueName": "C:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\music-linq\\LinqSkeleton.csproj",
       "projectName": "LinqSkeleton",
-      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\music-linq\\LinqSkeleton.csproj",
-      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\music-linq\\obj\\",
+      "projectPath": "C:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\music-linq\\LinqSkeleton.csproj",
+      "packagesPath": "C:\\Users\\Ozzy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\music-linq\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Ozzy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
-      "files": {
-        "lib/netcoreapp1.1/LinqSkeleton.dll": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\music-linq\\bin\\placeholder\\netcoreapp1.1\\LinqSkeleton.dll"
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -7473,11 +7485,12 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "[1.1.2, )",
+            "autoReferenced": true
           },
           "newtonsoft.json": {
             "target": "Package",
-            "version": "10.0.2"
+            "version": "[10.0.2, )"
           }
         }
       }

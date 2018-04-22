@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<nav class="navbar navbar-inverse navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Test App</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h2>Welcome to the Test</h2>
+        <h3>This is me building a cool application using an MVC framework! This app was built by Ozzy Gonzalez.</h3>
+        <a href="/register" class="btn btn-primary">Get Started Here!</a>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Manage Users</h3>
+            <p>Using this app, you be able to add, remove and edit users for the application.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Leave Messages</h3>
+            <p>Users will be able to write messages to other users.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Edit User Info</h3>
+            <p>Admins will be able to edit another user's info.</p>
+        </div>
+    </div>
+</div>

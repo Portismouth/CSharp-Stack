@@ -6,3 +6,6 @@ C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\dojoDachi\bin\Debug\net
 C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\dojoDachi\obj\Debug\netcoreapp1.1\dojoDachi.AssemblyInfo.cs
 C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\dojoDachi\obj\Debug\netcoreapp1.1\dojoDachi.dll
 C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\dojoDachi\obj\Debug\netcoreapp1.1\dojoDachi.pdb
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\dojoDachi\obj\Debug\netcoreapp1.1\dojoDachi.csprojResolveAssemblyReference.cache
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\dojoDachi\obj\Debug\netcoreapp1.1\dojoDachi.csproj.CoreCompileInputs.cache
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\dojoDachi\obj\Debug\netcoreapp1.1\dojoDachi.AssemblyInfoInputs.cache

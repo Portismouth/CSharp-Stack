@@ -6,3 +6,6 @@ C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\randomPasscode\bin\Debu
 C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\randomPasscode\obj\Debug\netcoreapp1.1\randomPasscode.AssemblyInfo.cs
 C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\randomPasscode\obj\Debug\netcoreapp1.1\randomPasscode.dll
 C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\randomPasscode\obj\Debug\netcoreapp1.1\randomPasscode.pdb
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\randomPasscode\obj\Debug\netcoreapp1.1\randomPasscode.csprojResolveAssemblyReference.cache
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\randomPasscode\obj\Debug\netcoreapp1.1\randomPasscode.csproj.CoreCompileInputs.cache
+C:\Users\Ozzy\Desktop\DojoAssignments\netCore\ASPNETcore\randomPasscode\obj\Debug\netcoreapp1.1\randomPasscode.AssemblyInfoInputs.cache

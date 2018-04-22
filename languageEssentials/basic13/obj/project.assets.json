@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -7042,21 +7042,33 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\basic13\\basic13.csproj",
+      "projectUniqueName": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\basic13\\basic13.csproj",
       "projectName": "basic13",
-      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\basic13\\basic13.csproj",
-      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\basic13\\obj\\",
+      "projectPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\basic13\\basic13.csproj",
+      "packagesPath": "C:\\Users\\Ozzy\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\languageEssentials\\basic13\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Ozzy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
-      "files": {
-        "lib/netcoreapp1.1/basic13.dll": "c:\\Users\\Ozzy\\Desktop\\DojoAssignments\\netCore\\basic13\\bin\\placeholder\\netcoreapp1.1\\basic13.dll"
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp1.1": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -7064,7 +7076,8 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "[1.1.2, )",
+            "autoReferenced": true
           }
         }
       }
